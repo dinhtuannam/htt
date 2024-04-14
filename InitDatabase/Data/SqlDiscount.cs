@@ -14,7 +14,7 @@ namespace InitDatabase.Data
         public int remaining { get; set; } = 0;
         public double value { get; set; } = 0;
         public string type { get; set; } = "";
-        public DateTime expiredTime { get; set; }
+        public DateTime expired_time { get; set; }
         public bool isdeleted { get; set; } = false;
     }
 }

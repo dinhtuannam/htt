@@ -3,6 +3,7 @@ using System;
 using InitDatabase.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace InitDatabase.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240414051133_database_v3")]
+    partial class database_v3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,7 +187,7 @@ namespace InitDatabase.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("expired_time")
+                    b.Property<DateTime>("expiredTime")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("isdeleted")
@@ -322,7 +325,7 @@ namespace InitDatabase.Migrations
                     b.Property<string>("actionid")
                         .HasColumnType("text");
 
-                    b.Property<string>("customer_code")
+                    b.Property<string>("customerCode")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -367,7 +370,7 @@ namespace InitDatabase.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("image_path")
+                    b.Property<string>("imagePath")
                         .IsRequired()
                         .HasColumnType("text");
 

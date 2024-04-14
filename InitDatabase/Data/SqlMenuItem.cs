@@ -12,7 +12,7 @@ namespace InitDatabase.Data
         public string name { get; set; } = "";
         public string description { get; set; } = "";
         public string ingredients { get; set; } = "";
-        public string imagePath { get; set; } = "";
+        public string image_path { get; set; } = "";
         public double price { get; set; } = 0;
         public double profit { get; set; } = 0;
         public bool isdeleted { get; set; } = false;

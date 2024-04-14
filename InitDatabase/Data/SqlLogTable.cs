@@ -9,7 +9,7 @@ namespace InitDatabase.Data
         [Key]
         public long id { get; set; }
         public string note { get; set; } = "";
-        public string customerCode { get; set; } = "";
+        public string customer_code { get; set; } = "";
         public SqlTable? table { get; set; }
         public SqlAction? action { get; set; }
         public DateTime time { get; set; }

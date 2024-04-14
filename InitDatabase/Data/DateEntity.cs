@@ -2,7 +2,7 @@
 {
     public class DateEntity
     {
-        public DateTime createTime { get; set; }
-        public DateTime updateTime { get; set; }
+        public DateTime create_time { get; set; }
+        public DateTime update_time { get; set; }
     }
 }
